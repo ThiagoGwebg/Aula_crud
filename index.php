@@ -7,12 +7,21 @@ $controller = new AlunoController($conn);
 $loginController = new LoginController($conn);
 $action = $_GET["action"] ?? 'index';
 
+if (!isset($_SESSION["usuario"]) && $action !== "mostrarLogin" && $action !== "facaLogin") {
+    header("location: index.php?action=mostrarLogin ");
+    exit;
+}
+;
+
 switch ($action) {
     case 'mostrarLogin':
-        $LoginController->mostrarLogin();
+        $loginController->mostrarLogin();
         break;
     case 'facaLogin':
-        $LoginController->entrar();
+        $loginController->entrar();
+        break;
+    case 'deslogar':
+        $loginController->deslogar();
         break;
     case 'create':
         $controller->create();

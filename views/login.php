@@ -17,7 +17,7 @@
             <h3>Senha:</h3>
             <input type="text" name="senha" placeholder="senha">
 
-            <button type="submit" Entrar></button>
+            <button type="submit" Entrar>Entrar</button>
         </form>
     </div>
 

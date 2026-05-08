@@ -10,6 +10,7 @@
 <body>
     <a href="index.php?action=create">Novo Aluno</a>
     <p>Ola, <?php $_SESSION["usuario"]["nome"]; ?>, seja bem vindo</p>
+    <a href="index.php?action=deslogar">Sair</a>
     <table>
         <tr>
             <td>ID</td>
